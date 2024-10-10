@@ -4,11 +4,14 @@
 
 
 /*自定义全局样式*/
+
+/*整个网页默认白底黑字*/
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/*媒体查询，根据用户的系统主题偏好（用户选择黑色），选择黑底白字*/
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
