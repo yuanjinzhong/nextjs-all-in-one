@@ -1,32 +1,41 @@
-@tailwind base;   /* 告诉tailwind css 引入基础样式 */
-@tailwind components;  /* 告诉tailwind css 引入组件样式 */
-@tailwind utilities;   /* 告诉tailwind css 引入工具类样式 */
+@tailwind base; /* 引入 Tailwind CSS 的基础样式。Tailwind 的基础样式为 HTML 元素提供了合理的默认样式（如 body、h1、p 等） */
+@tailwind components; /* 引入 Tailwind CSS 的组件样式，用于创建可以复用的 UI 组件（如按钮、表单等） */
+@tailwind utilities; /* 引入 Tailwind CSS 的工具类，提供一系列的实用类，可以在 HTML 中直接使用（如 p-4、text-center 等） */
 
 
 /*自定义全局样式*/
 
-/*整个网页默认白底黑字*/
+/*:root 是一种特殊的 CSS 选择器，代表文档的根元素。在 HTML 文档中，根元素就是 <html> 标签 ，在 :root选择器内部，可以定义全局变量；也可在指定的选择器内部，定义指定选择器可用的局部变量*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff; /* 定义全局变量，background为白色*/
+    --foreground: #171717; /* 定义全局变量，foreground为黑色*/
 }
 
-/*媒体查询，根据用户的系统主题偏好（用户选择黑色），选择黑底白字*/
+/*根据媒体查询，修改全局变量的值,prefers-color-scheme是系统预定义的媒体查询key*/
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a; /*用户偏好黑色主题的时候，全局变量background变成黑色*/
+        --foreground: #ededed; /*用户偏好黑色主题的时候，全局变量foreground变成白色*/
+    }
 }
 
+/*body选择器*/
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    color: var(--foreground); /*将全局变量应用到body选择器里面（<body>标签内），所有元素都应用全局变量对应的样式*/
+    background: var(--background); /*设置全局背景色*/
+    font-family: Arial, Helvetica, sans-serif; /*设置全局字体*/
 }
 
+
+/*@layer 是 Tailwind CSS 提供的一个 指令，用来组织和管理样式层级。
+在 Tailwind CSS 中，所有的样式分为三个层次：base、components 和 utilities。
+通过 @layer 指令，你可以将自定义的样式插入到这些层次中的合适位置。*/
+
+/*给tailwindcss 的utilities层增加一个工具类：text-balance*/
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+       /*text-wrap 是一个 CSS 属性（实验性属性），表示文本的换行规则。
+         balance 是该属性的一个值，指代使用平衡的方式进行文本换行 */
+        text-wrap: balance;
+    }
 }

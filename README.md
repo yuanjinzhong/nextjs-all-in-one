@@ -34,6 +34,48 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+# 目录结构介绍
+打印四级目录，排除不需要的文件夹
+```shell
+tree -L 4 -I "node_modules|.git|.next|readme里面的图片"
+```
+```shell
+├── README.md
+├── next-env.d.ts
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── src
+│   └── app                           // app路由，内部每一个文件夹下的page.tsx都是路由组建，且文件夹名字作为文件名
+│       ├── favicon.ico
+│       ├── fonts
+│       │   ├── GeistMonoVF.woff
+│       │   └── GeistVF.woff
+│       ├── globals.css                //全局样式文件,里面有针对tailwindcss样式做引入，增强
+│       ├── layout.tsx                 //全局布局，依赖全局样式
+│       ├── page.tsx                   //app路由下的根路由，对应“/”路由，依赖全局布局
+│       └── tailwind                   //自定义路由，路由路径为 “/tailwind”，内部可以有layout.tsx，self.css等局部布局和css
+│           └── page.tsx               // “/tailwind”路由的具体组建
+├── tailwind.config.ts                 //这个配置文件用于定义 Tailwind CSS 的一些全局设置，包括要处理的文件路径、主题配置以及插件
+└── tsconfig.json
+
+```
+
+
+
+
+
+
 ***
 # tailwind css 中文教程
 https://tailwind.org.cn/docs/guides/nextjs
+***
+# Tailwind CSS 的三层工具类
+> Base、Components 和 Utilities
+
+![img.png](readme里面的图片/img.png)
+![img_1.png](readme里面的图片/img_1.png)
+![img_2.png](readme里面的图片/img_2.png)
+![img_3.png](readme里面的图片/img_3.png)
