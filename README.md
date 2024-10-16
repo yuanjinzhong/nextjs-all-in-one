@@ -47,7 +47,7 @@ tree -L 4 -I "node_modules|.git|.next|readme里面的图片"
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.mjs
-├── src
+├── src                               // 这个src目录是可选的，添加src目录更符合传统项目的规范
 │   └── app                           // app路由，内部每一个文件夹下的page.tsx都是路由组建，且文件夹名字作为文件名
 │       ├── favicon.ico
 │       ├── fonts
@@ -62,7 +62,9 @@ tree -L 4 -I "node_modules|.git|.next|readme里面的图片"
 └── tsconfig.json
 
 ```
-
+##  目录说明
+* nextJs 中的静态资源都需要放在项目的根目录中的`/public`文件夹
+* 根目录下的`/src`文件夹是可选的，添加这个目录可能更符合传统的习惯
 
 
 
