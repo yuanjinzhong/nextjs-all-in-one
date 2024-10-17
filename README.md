@@ -63,7 +63,8 @@ tree -L 4 -I "node_modules|.git|.next|readme里面的图片"
 
 ```
 ##  目录说明
-* nextJs 中的静态资源都需要放在项目的根目录中的`/public`文件夹
+* nextJs 中的静态资源都需要放在项目的根目录中的`/public`文件夹，这样nextJs可以直接通过路径访问
+* 如果静态资源在其他目录下，则需要通过import的方式导入，nextJs才能访问
 * 根目录下的`/src`文件夹是可选的，添加这个目录可能更符合传统的习惯
 
 

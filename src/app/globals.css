@@ -12,7 +12,7 @@
 }
 
 /*根据媒体查询，修改全局变量的值,prefers-color-scheme是系统预定义的媒体查询key*/
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) { // todo 这里到时候改成dark，我这里的主题改成亮色是为了方便调试
     :root {
         --background: #0a0a0a; /*用户偏好黑色主题的时候，全局变量background变成黑色*/
         --foreground: #ededed; /*用户偏好黑色主题的时候，全局变量foreground变成白色*/
