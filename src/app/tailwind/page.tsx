@@ -4,13 +4,13 @@ import Image from "next/image";
 
 export default function Home() {
     return (
-        <div className="flex flex-auto">
+        <div className="flex justify-evenly">
             <h1 className="text-3xl font-bold underline shadow-lg flex items-center">
                 <p>tailwind css </p>
             </h1>
 
             {/*  水平对齐 mx-auto {   margin-left: auto;    margin-right: auto;  } */}
-            <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-xl flex items-center space-x-4">
+            <div className="p-6    bg-white rounded-xl shadow-xl flex items-center space-x-4">
                 <div className="shrink-0">
                     {/*
                     在 NextJs 中，所有静态资源（如图片、字体、图标等）应该放置在 /public 文件夹中(根目录下的public文件夹)。
@@ -27,7 +27,7 @@ export default function Home() {
             </div>
 
             <div
-                className="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+                className="py-8 px-8    bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
                 <Image src="/erin-lindford.png" alt={"Woman's Face"} width={96} height={96}
                        className="block mx-auto  rounded-full sm:mx-0 sm:shrink-0"/>
                 <div className="text-center space-y-2 sm:text-left">

@@ -3,16 +3,6 @@ import React from 'react';
 function Page() {
     return (
         <div>
-
-            {/*justify-start items-end space-x-2， 从主轴方向头部对齐， 交叉轴地步对齐，两个子元素之间‘2’个单位的间隙*/}
-
-            {/*<div className="flex max-w-2xl mx-auto justify-around  items-end space-x-2" id="main">*/}
-            {/*    <div className="bg-red-50 w-1/5 h-52" id="left">左</div>*/}
-            {/*    <div className="bg-blue-50 w-1/5 h-36" id="mid">中</div>*/}
-            {/*    <div className="bg-blue-50 w-1/5 h-36" id="right">右</div>*/}
-            {/*</div>*/}
-
-
             {/*响应式，移动设备优先原则
             在移动设备上 #left 和 #right 是垂直排列的，并且占满整个 #main 的宽度 它们之间的间隙是 3
             在桌面设备上 #left 和 #right 是水平排列的，分别占 1/3 和 2/3 的宽度 它们之间的间隙是 2*/}
@@ -28,8 +18,6 @@ function Page() {
             <div className="bg-red-500 sm:bg-green-500 md:bg-blue-500">
                 这个背景色会根据屏幕大小变化。
             </div>
-
-
         </div>
     );
 }
