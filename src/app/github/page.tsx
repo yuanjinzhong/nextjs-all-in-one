@@ -1,11 +1,15 @@
 const github = () => {
     return (
-        <div className="flex justify-center items-center mt-5 opacity-30">
+        <div className="text-sm text-gray-900">
 
-            <p className="bg-slate-100  text-2xl  text-red-500 font-semibold">
-                github项目页面
-            </p>
+            <nav className="bg-gray-900 text-white px-4 py-3 flex justify-center items-center">
 
+                github页面
+
+
+
+
+            </nav>
 
         </div>
     );
