@@ -12,7 +12,36 @@ const github = () => {
                         </svg>
                     </a>
 
-                    <input type="text" className="rounded bg-gray-900 border border-gray-600 placeholder-gray-600 w-72 px-2 py-1" placeholder="Search or jump to ..." />
+                    {/* 相对加绝对定位 */}
+                    <div className=" block relative">
+                        <input type="text" className="  rounded  bg-gray-900  border border-gray-600  placeholder-gray-400   w-72  px-3  py-1  " placeholder="Search or jump to ..." />
+                        <div className="  absolute   top-0   right-0  flex  items-center  h-full  "  >
+                            <div className="   border border-gray-600  rounded   text-xs text-gray-400 px-2  mr-2 " >  /  </div>
+                        </div>
+                    </div>
+
+                    {/* 纯粹flex布局 */}
+                    <div className="flex items-center rounded  border border-gray-600">
+                        <input type="text" className="rounded bg-gray-900  border-gray-600 placeholder-gray-400 w-72 px-3 py-1" placeholder="Search or jump to ..." />
+                        <div className="flex items-center h-full ">
+                            <div className="border border-gray-600 rounded text-xs text-gray-400 px-2 mr-2">/</div>
+                        </div>
+                    </div>
+                    <ul className="flex justify-center items-center font-semibold">
+                        <li className="flex mx-1">
+                            Pull Request
+                        </li>
+                        <li className="flex mx-1">
+                            Issues
+                        </li>
+                        <li className="flex mx-1">
+                            Marketplace
+                        </li>
+                        <li className="flex mx-1">
+                            Explore
+                        </li>
+                    </ul>
+
 
 
 
