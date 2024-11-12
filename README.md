@@ -103,7 +103,7 @@ https://tailwind.org.cn/docs/guides/nextjs
 * 参考仓库
   https://gitee.com/MASUKA/tailwind_github_ui
 
-* 该 demo vercel 部署的站点
+* 该 demo vercel 部署的站点 https://tailwindcss-nextjs-demo.vercel.app/github
 
 ## 别人实现 github 详情页面的项目
 
