@@ -36,10 +36,13 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 # 目录结构介绍
+
 打印四级目录，排除不需要的文件夹
+
 ```shell
 tree -L 4 -I "node_modules|.git|.next|readme里面的图片"
 ```
+
 ```shell
 ├── README.md
 ├── next-env.d.ts
@@ -62,23 +65,48 @@ tree -L 4 -I "node_modules|.git|.next|readme里面的图片"
 └── tsconfig.json
 
 ```
-##  目录说明
-* nextJs 中的静态资源都需要放在项目的根目录中的`/public`文件夹，这样nextJs可以直接通过路径访问
-* 如果静态资源在其他目录下，则需要通过import的方式导入，nextJs才能访问
-* 根目录下的`/src`文件夹是可选的，添加这个目录可能更符合传统的习惯
 
+## 目录说明
 
+- nextJs 中的静态资源都需要放在项目的根目录中的`/public`文件夹，这样 nextJs 可以直接通过路径访问
+- 如果静态资源在其他目录下，则需要通过 import 的方式导入，nextJs 才能访问
+- 根目录下的`/src`文件夹是可选的，添加这个目录可能更符合传统的习惯
 
+---
 
-
-***
 # tailwind css 中文教程
+
 https://tailwind.org.cn/docs/guides/nextjs
-***
+
+---
+
 # Tailwind CSS 的三层工具类
+
 > Base、Components 和 Utilities
 
 ![img.png](readme里面的图片/img.png)
 ![img_1.png](readme里面的图片/img_1.png)
 ![img_2.png](readme里面的图片/img_2.png)
 ![img_3.png](readme里面的图片/img_3.png)
+
+---
+
+# Demo github 详情页面
+
+![alt text](image.png)
+
+- nextjs 路由
+  http://localhost:3000/github
+- 参考视频
+  https://www.bilibili.com/video/BV1rf4y1g7r5/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=1abe58d207f15abfbba776385b925867
+
+* 参考仓库
+  https://gitee.com/MASUKA/tailwind_github_ui
+
+* 该 demo vercel 部署的站点
+
+## 别人实现 github 详情页面的项目
+
+https://github.com/duoluodexiaoxiaoyuan/mynextproject/tree/main
+
+别人部署 vercel 的地址 https://imitate-github.vercel.app/
