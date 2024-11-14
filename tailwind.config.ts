@@ -4,9 +4,9 @@ import type { Config } from "tailwindcss";
 // 定义了一个名为 config 的常量，类型为 Config。这就是 Tailwind CSS 的核心配置对象，包含了所有 Tailwind 配置选项
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",   /* 告诉tailwind css 这些路径下的 tailwind css 需要转换成原生的css */
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}", /* 告诉tailwind css 这些路径下的 tailwind css 需要转换成原生的css */
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",  /* 告诉tailwind css 这些路径下的 tailwind css 需要转换成原生的css */
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}" /* 告诉tailwind css 这些路径下的 tailwind css 需要转换成原生的css */,
+    "./components/**/*.{js,ts,jsx,tsx,mdx}" /* 告诉tailwind css 这些路径下的 tailwind css 需要转换成原生的css */,
+    "./app/**/*.{js,ts,jsx,tsx,mdx}" /* 告诉tailwind css 这些路径下的 tailwind css 需要转换成原生的css */,
   ],
   // theme 配置部分用于定义 Tailwind CSS 的默认主题以及自定义主题的扩展。
   theme: {
@@ -19,10 +19,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [],  // 可以添加一下有用的插件
+  plugins: [], // 可以添加一下有用的插件
 };
 export default config;
-
 
 /*
 
