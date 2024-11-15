@@ -1,4 +1,4 @@
-export { auth as middleware } from "auth";
+export {auth as middleware} from "auth";
 
 //matcher 的作用就是确定哪些页面会触发 next-auth 的身份验证检查。只有符合 matcher 的路径，才会经过 authorized 校验。（auth.config.ts文件里面的authorized方法）
 export const config = {
