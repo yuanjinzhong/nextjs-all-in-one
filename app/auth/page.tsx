@@ -6,8 +6,6 @@ const Page = () => {
     return (
         <div>
             <SignIn></SignIn>
-
-
         </div>
     );
 };
