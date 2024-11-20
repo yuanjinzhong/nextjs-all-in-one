@@ -12,8 +12,18 @@ import { handlers } from "auth";
  *   但是在做oauth2认证的时候，gitHub上配置跌回调地址是：http://localhost:3000/api/auth/callback/github， 这个地址正好是这个route handler 对应的 api接口，所以还是有点用的
  *
  */
+
+
+/**
+ * route  handler 里面只支持这些方法：GET, POST, PUT, PATCH, DELETE, HEAD, and OPTIONS.
+ *
+ * 所以只能导出这些方法，
+ *
+ * export const { GET, POST } = handlers; 这个写法是从handlers对象结构出 GET 和POSt方法
+ *
+ */
+
 export const { GET, POST } = handlers;
-console.log("github回调到这里了");
 
 //这是一个有用的route handle，访问路径为：http://localhost:3000/api/auth/ 不需要‘/app’路径
 // export async function GET(request: Request) {
