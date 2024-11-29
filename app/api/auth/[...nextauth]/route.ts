@@ -1,4 +1,6 @@
 import { handlers } from "auth";
+import {NextApiRequest, NextApiResponse} from "next";
+import type {NextRequest} from "next/server";
 
 /**
  * 约定：route.ts、js 只要定义在‘/app’目录下，则它就会被暴露成一个http接口（类似spring boot的 controller接口）
@@ -23,7 +25,25 @@ import { handlers } from "auth";
  *
  */
 
-export const { GET, POST } = handlers;
+// 自定义 GET 请求处理
+export const GET = async (req:NextRequest) => {
+    console.log(`route handler get 方法接收到请求",${req.url}`);  // 打印请求信息
+    // console.log("Request:", req);      // 打印请求头
+
+    // 调用 NextAuth 内部的处理逻辑
+   return  await handlers.GET(req);
+};
+
+export const POST = async (req:NextRequest) => {
+    // console.log("route handler post 方法接收到请求",req);
+    console.log(`route handler post 方法接收到请求",${req.url}`);  // 打印请求信息
+    const response = await handlers.POST(req);
+    // console.log("route handler post 返回值:", response);
+    return response;
+};
+
+
+
 
 //这是一个有用的route handle，访问路径为：http://localhost:3000/api/auth/ 不需要‘/app’路径
 // export async function GET(request: Request) {
