@@ -1,15 +1,23 @@
-import { signIn } from "@/auth";
+import React from 'react';
+import SignIn from "@/components/sign-in";
+import UserAvatar from '@/components/UserAvatar';
+import SignOut from '@/components/sign-out';
 
-export default function Home() {
+const Page = () => {
+
     return (
-        <form
-            action={async () => {
-                "use server"
-                await signIn("github")
-            }}
-        >
-            <button type="submit">Sign in</button>
-        </form>
+        <div>
+            <SignIn></SignIn>
 
+            {/* 先认证才能拿到头像数据 */}
+
+            <UserAvatar></UserAvatar>
+            <SignOut>退出登陆</SignOut>
+
+
+
+        </div>
     );
-}
+};
+
+export default Page;
