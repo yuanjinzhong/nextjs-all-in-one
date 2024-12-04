@@ -3,6 +3,13 @@
 @tailwind utilities; /* 引入 Tailwind CSS 的工具类，提供一系列的实用类，可以在 HTML 中直接使用（如 p-4、text-center 等） */
 
 
+/*让所有页面都处于全高*/
+html,
+body,
+:root{
+    height: 100%;
+}
+
 /*自定义全局样式*/
 
 /*:root 是一种特殊的 CSS 选择器，代表文档的根元素。在 HTML 文档中，根元素就是 <html> 标签 ，在 :root选择器内部，可以定义全局变量；也可在指定的选择器内部，定义指定选择器可用的局部变量*/
