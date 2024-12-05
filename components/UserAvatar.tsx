@@ -4,8 +4,7 @@ import {auth} from "../auth"
 
 export default async function UserAvatar() {
     const session = await auth()
-    if (!session?.user) return null
-
+    if (!session?.user) return <div>尚未登陆</div>
 
     return (
         <div>
