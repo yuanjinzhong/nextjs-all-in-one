@@ -1,8 +1,6 @@
 import {NextResponse} from "next/server";
 
 export function middleware(request: Request) {
-    // 模板字符串打印日志不直观,还得是这种原始的打印方式
-    // console.log("middleware中间件 Received Request:", request.url);
     // 继续处理请求
     return NextResponse.next();
 }
