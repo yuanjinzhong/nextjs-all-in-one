@@ -1,9 +1,5 @@
-import {NextResponse} from "next/server";
+export {auth as middleware} from "@/auth"
 
-export function middleware(request: Request) {
-    // 继续处理请求
-    return NextResponse.next();
-}
 
 //matcher 的作用就是确定哪些页面会触发middlerware的拦截
 // 在我们的例子中这个拦截主要是nextAuth的认证（next-auth 的身份验证检查。只有符合 matcher 的路径，才会经过 authorized 校验。（auth.config.ts文件里面的authorized方法））

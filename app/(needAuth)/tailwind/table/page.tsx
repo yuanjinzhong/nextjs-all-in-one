@@ -1,11 +1,11 @@
 import React from 'react';
 
 const people = [
-    { name: '张三', title: '工程师', email: 'zhangsan@example.com' },
-    { name: '李四', title: '产品经理', email: 'lisi@example.com' },
-    { name: '王五', title: '设计师', email: 'wangwu@example.com' },
-    { name: '赵六', title: '前端开发', email: 'zhaoliu@example.com' },
-    { name: '钱七', title: '数据分析师', email: 'qianqi@example.com' },
+    {name: '张三', title: '工程师', email: 'zhangsan@example.com'},
+    {name: '李四', title: '产品经理', email: 'lisi@example.com'},
+    {name: '王五', title: '设计师', email: 'wangwu@example.com'},
+    {name: '赵六', title: '前端开发', email: 'zhaoliu@example.com'},
+    {name: '钱七', title: '数据分析师', email: 'qianqi@example.com'},
 ];
 
 const PeopleList = () => {
@@ -28,10 +28,10 @@ const PeopleList = () => {
             </div>
 
             <a href="#"
-                className="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500">
+               className="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500">
                 <div className="flex items-center space-x-3">
                     <svg className="h-6 w-6 stroke-sky-500 group-hover:stroke-white" fill="none"
-                        viewBox="0 0 24 24"></svg>
+                         viewBox="0 0 24 24"></svg>
                     <h3 className="text-slate-900 group-hover:text-white text-sm font-semibold">New project</h3>
                 </div>
                 <p className="text-slate-500 group-hover:text-white text-sm">Create a new project from a variety of
@@ -44,7 +44,7 @@ const PeopleList = () => {
                     <label className="block">
                         <span className="block text-sm font-medium text-slate-700">Social Security Number</span>
                         <input
-                            className="border-slate-200 placeholder-slate-400 contrast-more:border-slate-400 contrast-more:placeholder-slate-500" />
+                            className="border-slate-200 placeholder-slate-400 contrast-more:border-slate-400 contrast-more:placeholder-slate-500"/>
                         <p className="mt-2 opacity-10 contrast-more:opacity-100 text-slate-600 text-sm">
                             We need this to steal your identity.
                         </p>

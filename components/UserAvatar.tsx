@@ -1,5 +1,5 @@
 import dayjs from "dayjs"
-import {auth} from "../auth"
+import {auth} from "@/auth"
 
 
 export default async function UserAvatar() {

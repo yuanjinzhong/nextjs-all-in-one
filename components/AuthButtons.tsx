@@ -1,12 +1,12 @@
 import React from 'react';
-import {signIn} from "@/auth";
+import {signIn, signOut} from "@/auth";
 import Image from "next/image";
-import {Button} from "@/ui/Button";
+import {Button} from "@/components/Button";
 import {ArrowRightIcon} from "@heroicons/react/20/solid";
 
 
 /**
- * github登陆组建
+ * github登陆组件
  * @constructor
  */
 export function GithubSignButtons() {
@@ -58,6 +58,31 @@ export function CredentialsSignInButton() {
         </div>
     );
 }
+
+
+/**
+ * 退出登陆
+ * @param children
+ * @constructor
+ */
+
+export function SignOut({children}: { children?: React.ReactNode }) {
+    return (<form
+        action={async () => {
+            "use server"
+            console.log("退出登陆")
+            await signOut();
+
+        }}
+    >
+        <div className="flex justify-center items-center">
+            <button className="border bg-green-500 rounded-xl mt-4 hover:bg-purple-300">{children} </button>
+        </div>
+    </form>);
+}
+
+
+
 
 
 
